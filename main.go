@@ -2,7 +2,7 @@ package main
 
 import (
 	"github.com/hashicorp/packer/packer/plugin"
-	"github.com/jamtur01/packer-post-processor-slacknotifications/plugin"
+	"github.com/turnbullpress/packer-post-processor-slack-notifications/plugin"
 )
 
 func main() {
@@ -10,6 +10,7 @@ func main() {
 	if err != nil {
 		panic(err)
 	}
+
 	server.RegisterPostProcessor(new(slacknotifications.PostProcessor))
 	server.Serve()
 }

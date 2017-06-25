@@ -1,0 +1,131 @@
+{
+	"ImportPath": "github.com/turnbullpress/packer-post-processor-slack-notifications",
+	"GoVersion": "go1.8",
+	"GodepVersion": "v79",
+	"Deps": [
+		{
+			"ImportPath": "github.com/ashwanthkumar/slack-go-webhook",
+			"Comment": "v0.1-11-gfe52e9b",
+			"Rev": "fe52e9bf2b376c1d74222c8deabda62fe3f29ed3"
+		},
+		{
+			"ImportPath": "github.com/hashicorp/errwrap",
+			"Rev": "7554cd9344cec97297fa6649b055a8c98c2a1e55"
+		},
+		{
+			"ImportPath": "github.com/hashicorp/go-checkpoint",
+			"Rev": "a8d0786e7fa88adb6b3bcaa341a99af7f9740671"
+		},
+		{
+			"ImportPath": "github.com/hashicorp/go-cleanhttp",
+			"Rev": "3573b8b52aa7b37b9358d966a898feb387f62437"
+		},
+		{
+			"ImportPath": "github.com/hashicorp/go-multierror",
+			"Rev": "83588e72410abfbe4df460eeb6f30841ae47d4c4"
+		},
+		{
+			"ImportPath": "github.com/hashicorp/go-uuid",
+			"Rev": "64130c7a86d732268a38cb04cfbaf0cc987fda98"
+		},
+		{
+			"ImportPath": "github.com/hashicorp/go-version",
+			"Rev": "03c5bf6be031b6dd45afec16b1cf94fc8938bc77"
+		},
+		{
+			"ImportPath": "github.com/hashicorp/packer/common",
+			"Comment": "v1.0.2-9-g4465252",
+			"Rev": "446525201bcf1b56eaa6bac8f4ac528f4e25b1d6"
+		},
+		{
+			"ImportPath": "github.com/hashicorp/packer/common/uuid",
+			"Comment": "v1.0.2-9-g4465252",
+			"Rev": "446525201bcf1b56eaa6bac8f4ac528f4e25b1d6"
+		},
+		{
+			"ImportPath": "github.com/hashicorp/packer/helper/config",
+			"Comment": "v1.0.2-9-g4465252",
+			"Rev": "446525201bcf1b56eaa6bac8f4ac528f4e25b1d6"
+		},
+		{
+			"ImportPath": "github.com/hashicorp/packer/packer",
+			"Comment": "v1.0.2-9-g4465252",
+			"Rev": "446525201bcf1b56eaa6bac8f4ac528f4e25b1d6"
+		},
+		{
+			"ImportPath": "github.com/hashicorp/packer/packer/plugin",
+			"Comment": "v1.0.2-9-g4465252",
+			"Rev": "446525201bcf1b56eaa6bac8f4ac528f4e25b1d6"
+		},
+		{
+			"ImportPath": "github.com/hashicorp/packer/packer/rpc",
+			"Comment": "v1.0.2-9-g4465252",
+			"Rev": "446525201bcf1b56eaa6bac8f4ac528f4e25b1d6"
+		},
+		{
+			"ImportPath": "github.com/hashicorp/packer/template",
+			"Comment": "v1.0.2-9-g4465252",
+			"Rev": "446525201bcf1b56eaa6bac8f4ac528f4e25b1d6"
+		},
+		{
+			"ImportPath": "github.com/hashicorp/packer/template/interpolate",
+			"Comment": "v1.0.2-9-g4465252",
+			"Rev": "446525201bcf1b56eaa6bac8f4ac528f4e25b1d6"
+		},
+		{
+			"ImportPath": "github.com/hashicorp/packer/version",
+			"Comment": "v1.0.2-9-g4465252",
+			"Rev": "446525201bcf1b56eaa6bac8f4ac528f4e25b1d6"
+		},
+		{
+			"ImportPath": "github.com/hashicorp/yamux",
+			"Rev": "d1caa6c97c9fc1cc9e83bbe34d0603f9ff0ce8bd"
+		},
+		{
+			"ImportPath": "github.com/mitchellh/go-fs",
+			"Rev": "7bae45d9a684750e82b97ff320c82556614e621b"
+		},
+		{
+			"ImportPath": "github.com/mitchellh/go-fs/fat",
+			"Rev": "7bae45d9a684750e82b97ff320c82556614e621b"
+		},
+		{
+			"ImportPath": "github.com/mitchellh/iochan",
+			"Rev": "87b45ffd0e9581375c491fef3d32130bb15c5bd7"
+		},
+		{
+			"ImportPath": "github.com/mitchellh/mapstructure",
+			"Rev": "ca63d7c062ee3c9f34db231e352b60012b4fd0c1"
+		},
+		{
+			"ImportPath": "github.com/mitchellh/multistep",
+			"Rev": "391576a156a54cfbb4cf5d5eda40cf6ffa3e3a4d"
+		},
+		{
+			"ImportPath": "github.com/mitchellh/reflectwalk",
+			"Rev": "8d802ff4ae93611b807597f639c19f76074df5c6"
+		},
+		{
+			"ImportPath": "github.com/moul/http2curl",
+			"Rev": "4e24498b31dba4683efb9d35c1c8a91e2eda28c8"
+		},
+		{
+			"ImportPath": "github.com/parnurzeal/gorequest",
+			"Comment": "v0.2.15-7-g5bf13be",
+			"Rev": "5bf13be198787abbed057fb7c4007f372083a0f5"
+		},
+		{
+			"ImportPath": "github.com/pkg/errors",
+			"Comment": "v0.7.1-1-ga887431",
+			"Rev": "a887431f7f6ef7687b556dbf718d9f351d4858a0"
+		},
+		{
+			"ImportPath": "github.com/ugorji/go/codec",
+			"Rev": "5efa3251c7f7d05e5d9704a69a984ec9f1386a40"
+		},
+		{
+			"ImportPath": "golang.org/x/net/publicsuffix",
+			"Rev": "cd95c68ba21fc7ee16ee38cc420473e3d8c4afd8"
+		}
+	]
+}
