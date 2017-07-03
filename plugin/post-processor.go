@@ -4,17 +4,17 @@ import (
 	"fmt"
 	"log"
 
-  "github.com/hashicorp/packer/common"
-  "github.com/hashicorp/packer/helper/config"
+	"github.com/ashwanthkumar/slack-go-webhook"
+	"github.com/hashicorp/packer/common"
+	"github.com/hashicorp/packer/helper/config"
 	"github.com/hashicorp/packer/packer"
 	"github.com/hashicorp/packer/template/interpolate"
-  "github.com/ashwanthkumar/slack-go-webhook"
 )
 
 type Config struct {
 	common.PackerConfig `mapstructure:",squash"`
 
-  Channel string `mapstructure:"channel"`
+	Channel string `mapstructure:"channel"`
 	Url     string `mapstructure:"url"`
 
 	ctx interpolate.Context
@@ -36,11 +36,11 @@ func (p *PostProcessor) Configure(raws ...interface{}) error {
 		return err
 	}
 
-  if len(p.config.Channel) == 0 {
+	if len(p.config.Channel) == 0 {
 		return fmt.Errorf("No channel specified in Slack configuration")
 	}
 
-  if len(p.config.Url) == 0 {
+	if len(p.config.Url) == 0 {
 		return fmt.Errorf("No Webhook URL specified in Slack configuration")
 	}
 
@@ -50,17 +50,17 @@ func (p *PostProcessor) Configure(raws ...interface{}) error {
 func (p *PostProcessor) PostProcess(ui packer.Ui, artifact packer.Artifact) (packer.Artifact, bool, error) {
 	log.Println("Sending Slack notification")
 
-  webhookUrl := p.config.Url
-	payload := slack.Payload {
-    Text: artifact.String(),
-    Username: "Packer",
-    Channel: p.config.Channel,
-    IconEmoji: ":monkey_face:",
-  }
-  err := slack.Send(webhookUrl, "", payload)
-  if len(err) > 0 {
-    fmt.Printf("error: %s\n", err)
-  }
+	webhookUrl := p.config.Url
+	payload := slack.Payload{
+		Text:      artifact.String(),
+		Username:  "Packer",
+		Channel:   p.config.Channel,
+		IconEmoji: ":monkey_face:",
+	}
+	err := slack.Send(webhookUrl, "", payload)
+	if len(err) > 0 {
+		fmt.Printf("error: %s\n", err)
+	}
 
 	return artifact, true, nil
 }
