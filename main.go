@@ -2,7 +2,7 @@ package main
 
 import (
 	"github.com/hashicorp/packer/packer/plugin"
-	"github.com/turnbullpress/packer-post-processor-slack-notifications/plugin"
+	"github.com/turnbullpress/packer-slacknotifications"
 )
 
 func main() {
