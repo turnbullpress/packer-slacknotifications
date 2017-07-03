@@ -8,7 +8,10 @@ prepare:
 test: prepare
 	go test ./...
 
-build: test
+fmt:
+	go fmt . ./plugin
+
+build: fmt test
 	go build -v
 
 install: build
