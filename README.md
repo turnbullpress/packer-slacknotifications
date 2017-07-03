@@ -1,6 +1,6 @@
-# packer-post-processor-slack-notifications
+# packer-slacknotifications
 
-[![Build Status](https://travis-ci.org/turnbullpress/packer-post-processor-slack-notifications.svg?branch=master)](https://travis-ci.org/turnbullpress/packer-post-processor-slack-notifications)
+[![Build Status](https://travis-ci.org/turnbullpress/packer-slacknotifications.svg?branch=master)](https://travis-ci.org/turnbullpress/packer-slacknotifications)
 [![MIT License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat)](LICENSE)
 
 Packer post-processor plugin for Slack notifications
@@ -12,7 +12,7 @@ The Packer Slack Notification post-processor assists you in sending Slack notifi
 Packer supports plugins. Please read document the following:  
 https://www.packer.io/docs/extend/plugins.html
 
-You can download binaries built for your architecture from [latest releases](https://github.com/turnbullpress/packer-post-processor-slack-notifications/releases/latest).
+You can download binaries built for your architecture from [latest releases](https://github.com/turnbullpress/packer-slacknotifications/releases/latest).
 
 ## Usage
 The following example `template.json`:
@@ -65,8 +65,8 @@ go get github.com/tools/godep
 godep restore
 go get ./...
 go test ./...
-?       github.com/turnbullpress/packer-post-processor-slack-notifications  [no test files]
-?        github.com/turnbullpress/packer-post-processor-slack-notifications/plugin   0.029s
+?       github.com/turnbullpress/packer-slacknotifications  [no test files]
+?        github.com/turnbullpress/packer-slacknotifications/plugin   0.029s
 ```
 Run the unit tests when developing changes to the plugin.
 
@@ -77,11 +77,11 @@ go get github.com/tools/godep
 godep restore
 go get ./...
 go test ./...
-?       github.com/turnbullpress/packer-post-processor-slack-notifications  [no test files]
-?       github.com/turnbullpress/packer-post-processor-slack-notifications/plugin   0.023s
+?       github.com/turnbullpress/packer-slacknotifications  [no test files]
+?       github.com/turnbullpress/packer-slacknotifications/plugin   0.023s
 go build ./
 mkdir -p ~/.packer.d/plugins
-install ./packer-post-processor-slack-notifications ~/.packer.d/plugins/
+install ./packer-slacknotifications ~/.packer.d/plugins/
 ```
 Run tests, build and move the compiled plugin to the plugin directory.
 
@@ -92,8 +92,8 @@ go get github.com/tools/godep
 godep restore
 go get ./...
 go test ./...
-?       github.com/turnbullpress/packer-post-processor-slack-notifications  [no test files]
-github.com/turnbullpress/packer-post-processor-slack-notifications/plugin   0.020s
+?       github.com/turnbullpress/packer-slacknotifications  [no test files]
+github.com/turnbullpress/packer-slacknotifications/plugin   0.020s
 ...
 go get github.com/mitchellh/gox
 gox --output 'dist/{{.OS}}_{{.Arch}}/{{.Dir}}'
